@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Prompt Manager</h1>
+            <p>Save and manage your favorite AI prompts</p>
+        </header>
+
+        <!-- Search Box -->
+        <div class="search-section">
+            <input type="text" id="searchBox" placeholder="🔍 Search prompts...">
+        </div>
+
+        <!-- Add/Edit Form -->
+        <section class="input-section">
+            <input type="text" id="promptTitle" placeholder="Title (e.g., Python Debugger)">
+            <select id="promptCategory">
+                <option value="">Select Category</option>
+                <option value="coding">💻 Coding</option>
+                <option value="writing">✍️ Writing</option>
+                <option value="analysis">📊 Analysis</option>
+                <option value="other">🔧 Other</option>
+            </select>
+            <textarea id="promptText" placeholder="Paste your prompt here..."></textarea>
+            <div class="button-group">
+                <button id="addBtn">Add Prompt</button>
+                <button id="cancelBtn" class="cancel-btn hidden">Cancel</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Filter Buttons -->
+        <div class="filter-section">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="coding">💻 Coding</button>
+            <button class="filter-btn" data-category="writing">✍️ Writing</button>
+            <button class="filter-btn" data-category="analysis">📊 Analysis</button>
+            <button class="filter-btn" data-category="other">🔧 Other</button>
+        </div>
+
+        <!-- Prompt List -->
+        <section id="promptList" class="prompt-list">
+            <p class="no-prompts">No prompts yet. Add your first one! 🚀</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

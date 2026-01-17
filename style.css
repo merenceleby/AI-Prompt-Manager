@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 700px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: #4a90e2;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: 1.5rem;
+}
+
+#searchBox {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#searchBox:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+/* Input Section */
+.input-section {
+    margin-bottom: 2rem;
+}
+
+input, textarea, select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+select {
+    cursor: pointer;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+    font-family: monospace;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+button#addBtn, .cancel-btn {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button#addBtn {
+    background-color: #4a90e2;
+    color: white;
+}
+
+button#addBtn:hover {
+    background-color: #357abd;
+}
+
+.cancel-btn {
+    background-color: #666;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #555;
+}
+
+/* Filter Section */
+.filter-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: #4a90e2;
+    color: #4a90e2;
+}
+
+.filter-btn.active {
+    background: #4a90e2;
+    color: white;
+    border-color: #4a90e2;
+}
+
+/* Prompt Cards */
+.prompt-list {
+    min-height: 100px;
+}
+
+.no-prompts {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+}
+
+.prompt-card {
+    background: #fff;
+    border-left: 5px solid #4a90e2;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.prompt-card.coding { border-left-color: #4a90e2; }
+.prompt-card.writing { border-left-color: #f39c12; }
+.prompt-card.analysis { border-left-color: #27ae60; }
+.prompt-card.other { border-left-color: #95a5a6; }
+
+.prompt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.prompt-card h3 {
+    margin: 0;
+    color: #333;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.category-badge.coding { background: #e3f2fd; color: #1976d2; }
+.category-badge.writing { background: #fff3e0; color: #e65100; }
+.category-badge.analysis { background: #e8f5e9; color: #2e7d32; }
+.category-badge.other { background: #f5f5f5; color: #616161; }
+
+.prompt-card p {
+    background: #f9f9f9;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 10px 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.copy-btn, .edit-btn, .delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.copy-btn {
+    background: #27ae60;
+    color: white;
+}
+
+.copy-btn:hover {
+    background: #229954;
+}
+
+.edit-btn {
+    background: #f39c12;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #e67e22;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+.hidden {
+    display: none;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #f0f0f0;
+    margin: 2rem 0;
+}
