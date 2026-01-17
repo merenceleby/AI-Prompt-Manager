@@ -17,7 +17,7 @@ Built a browser-based CRUD application with intelligent filtering, real-time sea
 - **Category System**: Organize prompts by type (Coding, Writing, Analysis, Other)
 - **One-Click Copy**: Instant clipboard integration with visual feedback
 - **Data Persistence**: LocalStorage implementation for offline-first functionality
-- **Zero Dependencies**: Pure JavaScript—no jQuery, no React, no frameworks
+- **Zero Dependencies**: Pure JavaScript
 - **Security**: XSS protection through HTML escaping
 - **Responsive Design**: Mobile-first approach with CSS Grid and Flexbox
 
